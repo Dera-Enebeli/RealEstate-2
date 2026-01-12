@@ -49,14 +49,18 @@ export default function Contact() {
       e.preventDefault();
 
       try {
+        const data = new FormData();
+        
+        // Append all form fields including phone
+        for (const key in formData) {
+          data.append(key, formData[key]);
+        }
+        
         const response = await fetch(
           "http://localhost:5000/api/forms/contact",
           {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json", // Set JSON Content-Type
-            },
-            body: JSON.stringify(formData), // Send formData as JSON
+            body: data, // Send as FormData (not JSON)
           }
         );
 
