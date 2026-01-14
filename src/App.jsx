@@ -10,6 +10,12 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Slider from "./Slider";
 import Body from "./pages/Body";
 import Blog from "./pages/Blog";
+import Buy from "./pages/Buy";
+import Rent from "./pages/Rent";
+import Sell from "./pages/Sell";
+import Construction from "./pages/Construction";
+import Management from "./pages/Management";
+import Shortlets from "./pages/Shortlets";
 
 function Layout() {
   return (
@@ -56,9 +62,33 @@ const routes = createBrowserRouter([
         path: "contact",
         element: <Contact />,
       },
-      {
+{
         path: "blog",
         element: <Blog />,
+      },
+      {
+        path: "buy",
+        element: <Buy />,
+      },
+      {
+        path: "rent",
+        element: <Rent />,
+      },
+      {
+        path: "sell",
+        element: <Sell />,
+      },
+      {
+        path: "construction",
+        element: <Construction />,
+      },
+      {
+        path: "management",
+        element: <Management />,
+      },
+      {
+        path: "shortlets",
+        element: <Shortlets />,
       },
     ],
   },
